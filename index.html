@@ -36,8 +36,6 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: var(--ff-serif); background: var(--paper); color: var(--ink); min-height: 100vh; line-height: 1.65; }
-
-    /* ── Header ── */
     .site-header { border-bottom: 1px solid var(--rule2); background: var(--paper); position: sticky; top: 0; z-index: 100; }
     .header-inner { max-width: 1000px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .site-logo { display: flex; flex-direction: column; }
@@ -45,11 +43,7 @@
     .logo-name { font-size: 17px; font-weight: 500; font-style: italic; color: var(--ink); }
     .btn-admin { font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: .06em; padding: .38rem .9rem; border: .5px solid var(--rule3); border-radius: var(--radius); background: transparent; color: var(--ink-soft); cursor: pointer; transition: all .18s; }
     .btn-admin:hover { background: var(--paper-tint); color: var(--ink); }
-
-    /* ── Main ── */
     .main { max-width: 1000px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
-
-    /* ── Hero ── */
     .hero { margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule2); padding-bottom: 2rem; }
     .hero-top { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: .8rem; }
     .hero-title { font-size: 30px; font-weight: 400; font-style: italic; line-height: 1.2; color: var(--ink); }
@@ -58,8 +52,6 @@
     .hero-stats { display: flex; gap: 1.5rem; margin-top: 1.2rem; flex-wrap: wrap; }
     .stat-num { font-family: var(--ff-mono); font-size: 20px; font-weight: 500; color: var(--ink); }
     .stat-label { font-family: var(--ff-mono); font-size: 10px; color: var(--ink-faint); letter-spacing: .08em; text-transform: uppercase; }
-
-    /* ── Tabs bar ── */
     .tabs-wrap { position: relative; margin-bottom: 2rem; }
     .tabs-bar { display: flex; gap: 0; border-bottom: 1px solid var(--rule2); overflow-x: auto; scrollbar-width: none; }
     .tabs-bar::-webkit-scrollbar { display: none; }
@@ -68,22 +60,16 @@
     .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
     .tab-count { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; font-size: 9px; background: var(--paper-tint); border-radius: 50%; margin-left: 4px; color: var(--ink-soft); vertical-align: middle; }
     .tab-btn.active .tab-count { background: var(--accent); color: #fff; }
-
-    /* ── Sections ── */
     .section { display: none; animation: fadeIn .2s ease; }
     .section.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
     .section-intro { font-size: 15px; font-style: italic; color: var(--ink-soft); margin-bottom: 1.5rem; }
-
-    /* ── Sub-tabs ── */
     .subtabs-bar { display: flex; gap: .4rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .subtab-btn { font-family: var(--ff-mono); font-size: 10px; letter-spacing: .05em; padding: .38rem 1rem; border: .5px solid var(--rule2); border-radius: 20px; background: transparent; color: var(--ink-faint); cursor: pointer; transition: all .15s; white-space: nowrap; }
     .subtab-btn:hover { background: var(--paper-tint); color: var(--ink-soft); }
     .subtab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
     .subsection { display: none; }
     .subsection.active { display: block; animation: fadeIn .15s ease; }
-
-    /* ── Doc cards ── */
     .doc-list { display: flex; flex-direction: column; gap: .55rem; }
     .doc-card { display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 1rem; padding: .85rem 1.1rem; border: .5px solid var(--rule2); border-radius: var(--radius-lg); background: var(--paper); transition: border-color .18s, box-shadow .18s, transform .12s; }
     .doc-card:hover { border-color: var(--rule3); box-shadow: var(--shadow); transform: translateY(-1px); }
@@ -99,24 +85,16 @@
     .btn-open:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent-mid); }
     .btn-open svg { width: 10px; height: 10px; }
     .empty-state { text-align: center; padding: 2.5rem 1rem; border: .5px dashed var(--rule2); border-radius: var(--radius-lg); font-family: var(--ff-mono); font-size: 11px; color: var(--ink-faint); }
-
-    /* ── Loading ── */
     .loading-bar { text-align: center; padding: 3rem 1rem; font-family: var(--ff-mono); font-size: 11px; color: var(--ink-faint); }
     .loading-bar::after { content: ''; display: inline-block; width: 8px; height: 8px; border: 1.5px solid var(--ink-faint); border-top-color: var(--accent); border-radius: 50%; margin-left: 8px; animation: spin .7s linear infinite; vertical-align: middle; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── Toast ── */
     .toast { position: fixed; bottom: 2rem; right: 2rem; font-family: var(--ff-mono); font-size: 11px; padding: .7rem 1.2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow); z-index: 999; opacity: 0; transform: translateY(8px); transition: all .25s; pointer-events: none; }
     .toast.show { opacity: 1; transform: translateY(0); }
     .toast.ok  { background: var(--success-lt); color: var(--success); border: .5px solid var(--success); }
     .toast.err { background: var(--danger-lt);  color: var(--danger);  border: .5px solid var(--danger); }
-
-    /* ── Footer ── */
     .site-footer { border-top: 1px solid var(--rule); background: var(--paper); }
     .footer-inner { max-width: 1000px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
     .footer-text { font-family: var(--ff-mono); font-size: 10px; color: var(--ink-faint); }
-
-    /* ── Modal ── */
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(20,18,14,.55); backdrop-filter: blur(3px); z-index: 200; align-items: center; justify-content: center; padding: 1rem; }
     .modal-overlay.open { display: flex; }
     .modal { background: var(--paper); border: .5px solid var(--rule3); border-radius: var(--radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,.18); width: 100%; max-width: 440px; animation: modalIn .2s ease; }
@@ -126,8 +104,6 @@
     .modal-close { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 20px; line-height: 1; padding: 2px 4px; transition: color .15s; }
     .modal-close:hover { color: var(--ink); }
     .modal-body { padding: 1.4rem 1.5rem; }
-
-    /* ── Forms ── */
     .form-group { margin-bottom: 1rem; }
     .form-label { display: block; font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: .4rem; }
     .form-label span { color: var(--danger); }
@@ -145,12 +121,8 @@
     .login-hint { font-family: var(--ff-mono); font-size: 10.5px; color: var(--ink-faint); margin-bottom: 1.2rem; line-height: 1.6; }
     .login-error { font-family: var(--ff-mono); font-size: 10.5px; color: var(--danger); background: var(--danger-lt); padding: .5rem .8rem; border-radius: var(--radius); margin-bottom: 1rem; display: none; }
     .msg-success { font-family: var(--ff-mono); font-size: 10.5px; color: var(--success); background: var(--success-lt); padding: .5rem .8rem; border-radius: var(--radius); margin-bottom: 1rem; display: none; }
-
-    /* ── Token setup banner ── */
     .token-banner { background: #fffbeb; border: .5px solid #d4a017; border-radius: var(--radius-lg); padding: 1rem 1.2rem; margin-bottom: 1.2rem; font-family: var(--ff-mono); font-size: 10.5px; color: #7a5a00; line-height: 1.7; }
     .token-banner strong { display: block; margin-bottom: .3rem; color: #5a4000; }
-
-    /* ── Admin panel ── */
     .admin-panel { display: none; position: fixed; inset: 0; background: var(--paper-warm); z-index: 300; overflow-y: auto; }
     .admin-panel.open { display: block; }
     .admin-header { background: var(--paper); border-bottom: 1px solid var(--rule2); position: sticky; top: 0; z-index: 10; }
@@ -174,8 +146,6 @@
     .admin-doc-name { font-size: 14.5px; color: var(--ink); }
     .admin-doc-meta { font-family: var(--ff-mono); font-size: 9.5px; color: var(--ink-faint); margin-top: 1px; }
     .sync-status { font-family: var(--ff-mono); font-size: 9.5px; color: var(--ink-faint); margin-top: .5rem; text-align: center; }
-
-    /* ── Responsive ── */
     @media (max-width: 720px) {
       .header-inner, .main, .footer-inner { padding-left: 1.1rem; padding-right: 1.1rem; }
       .hero-title { font-size: 23px; }
@@ -190,10 +160,8 @@
 </head>
 <body>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <div class="site-logo">
@@ -204,7 +172,6 @@
   </div>
 </header>
 
-<!-- MAIN -->
 <main class="main">
   <section class="hero">
     <div class="hero-top">
@@ -222,7 +189,6 @@
   <div id="sections-container"></div>
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-text" id="footer-left">© 2025 Prof. Mourad LAMRAOUI - UJM IUT de Roanne</span>
@@ -230,7 +196,6 @@
   </div>
 </footer>
 
-<!-- LOGIN MODAL -->
 <div class="modal-overlay" id="login-overlay" onclick="closeLoginOnBg(event)">
   <div class="modal">
     <div class="modal-header">
@@ -250,7 +215,6 @@
   </div>
 </div>
 
-<!-- ADMIN PANEL -->
 <div class="admin-panel" id="admin-panel">
   <div class="admin-header">
     <div class="admin-header-inner">
@@ -267,7 +231,6 @@
 
   <div class="admin-main">
     <aside>
-      <!-- Token setup -->
       <div class="admin-card" id="token-card">
         <div class="admin-card-title">🔑 Token GitHub</div>
         <div class="token-banner">
@@ -283,21 +246,17 @@
         <div class="sync-status" id="token-status"></div>
       </div>
 
-      <!-- Add document -->
       <div class="admin-card" style="margin-top:1rem;">
         <div class="admin-card-title">Ajouter un document</div>
         <div class="msg-success" id="add-success">Document publié avec succès !</div>
-
         <div class="form-group">
           <label class="form-label" for="f-type">Rubrique <span>*</span></label>
           <select class="form-select" id="f-type"></select>
         </div>
-
         <div class="form-group">
           <label class="form-label" for="f-title">Titre <span>*</span></label>
           <input class="form-input" type="text" id="f-title" placeholder="Ex: Séquence 1 - Circuits RLC" />
         </div>
-
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="f-subject">Matière / Thème</label>
@@ -308,25 +267,19 @@
             <input class="form-input" type="text" id="f-info" placeholder="Ex: 12 pages" />
           </div>
         </div>
-
         <div class="form-group">
           <label class="form-label" for="f-url">Lien du document <span>*</span></label>
           <input class="form-input" type="url" id="f-url" placeholder="https://drive.google.com/…" />
-          <div class="form-hint">
-            Google Drive : Partager → "Tout le monde avec le lien" → rôle <strong>Lecteur</strong> → copier le lien.
-          </div>
+          <div class="form-hint">Google Drive : Partager → "Tout le monde avec le lien" → rôle <strong>Lecteur</strong> → copier le lien.</div>
         </div>
-
         <div class="form-group">
           <label class="form-label" for="f-badge">Badge (optionnel)</label>
           <input class="form-input" type="text" id="f-badge" placeholder="Ex: Corrigé inclus" />
         </div>
-
         <button class="btn-primary" id="btn-add" onclick="addDocument()">Publier →</button>
         <div class="sync-status" id="sync-status"></div>
       </div>
 
-      <!-- Config -->
       <div class="admin-card" style="margin-top:1rem;">
         <div class="admin-card-title">Informations du site</div>
         <div class="form-group">
@@ -346,27 +299,27 @@
           <input class="form-input" type="text" id="cfg-dept" placeholder="SPI" />
         </div>
         <div class="form-group">
-          <label class="form-label" for="cfg-pwd">Mot de passe admin</label>
+          <label class="form-label" for="cfg-pwd">Nouveau mot de passe admin</label>
           <input class="form-input" type="password" id="cfg-pwd" placeholder="Laisser vide = inchangé" />
+          <div class="form-hint">Le mot de passe est stocké uniquement dans votre navigateur, jamais sur GitHub.</div>
         </div>
         <button class="btn-primary" onclick="saveConfig()" style="background:var(--ink);">Enregistrer →</button>
         <div class="msg-success" id="cfg-success" style="margin-top:.7rem;margin-bottom:0;">Infos sauvegardées.</div>
       </div>
     </aside>
 
-    <!-- Doc lists -->
     <div id="admin-doc-lists"></div>
   </div>
 </div>
 
 <script>
 /* ══════════════════════════════════════════════════════
-   GITHUB CONFIG — NE PAS MODIFIER LES CLÉS, SEULEMENT LES VALEURS
+   GITHUB CONFIG
 ══════════════════════════════════════════════════════ */
 const GH_USER   = 'davidkochoni';
 const GH_REPO   = 'portail-cours';
 const GH_BRANCH = 'main';
-const GH_FILE   = 'data.json';   // fichier de données dans le dépôt
+const GH_FILE   = 'data.json';
 const GH_API    = `https://api.github.com/repos/${GH_USER}/${GH_REPO}/contents/${GH_FILE}`;
 
 /* ══════════════════════════════════════════════════════
@@ -386,22 +339,34 @@ const CATEGORIES = [
   { id:'guides_techniques',        label:'Guides techniques & Réf. sci.', intro:'Guides techniques et références scientifiques de référence.' },
   { id:'normes',                   label:'Normes',                        intro:'Normes et standards réglementaires.' },
   { id:'python_simulink',          label:'Programme Python_Simulink',     intro:'Scripts Python, modèles Simulink et notebooks.' },
-  { id:'rapport_agregation',       label:'Rapport_Agrégation',           intro:'Rapports et dossiers relatifs à l\'agrégation.' },
+  { id:'rapport_agregation',       label:'Rapport_Agrégation',           intro:"Rapports et dossiers relatifs à l'agrégation." },
   { id:'referentiels',             label:'Référentiels',                  intro:'Référentiels de formation et programmes officiels.' },
 ];
 
 /* ══════════════════════════════════════════════════════
    STATE
 ══════════════════════════════════════════════════════ */
-const KEY_CFG  = 'portail_config';
-const KEY_SESS = 'portail_session';
-const KEY_TOK  = 'portail_gh_token';
-const DEFAULT_CFG = { name:'Prof. Mourad LAMRAOUI', institution:'UJM IUT de Roanne', year:'2025 - 2026', dept:'SPI', password:'admin2026' };
+const KEY_CFG      = 'portail_config';
+const KEY_SESS     = 'portail_session';
+const KEY_TOK      = 'portail_gh_token';
+const KEY_PWD_HASH = 'portail_pwd_hash';         // ← NOUVEAU : hash local du mot de passe
+
+// Mot de passe par défaut — NE CONTIENT PLUS DE MOT DE PASSE EN CLAIR DANS LE JSON
+const DEFAULT_CFG = { name:'Prof. Mourad LAMRAOUI', institution:'UJM IUT de Roanne', year:'2025 - 2026', dept:'SPI' };
+const DEFAULT_PWD = 'admin2026';                 // utilisé uniquement si aucun hash n'est stocké
 
 let docs    = [];
-let fileSha = null;   // SHA du fichier data.json sur GitHub (requis pour le mettre à jour)
+let fileSha = null;
 let config  = {};
 let nextId  = 1;
+
+/* ══════════════════════════════════════════════════════
+   HASH SHA-256 (Web Crypto API — natif dans tous les navigateurs modernes)
+══════════════════════════════════════════════════════ */
+async function hashPwd(pwd) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
 
 /* ══════════════════════════════════════════════════════
    INIT
@@ -414,11 +379,10 @@ async function init() {
   buildAdminTypeSelect();
   applyConfig();
 
-  // Charger les données depuis GitHub
   showLoading(true);
   await loadFromGitHub();
   showLoading(false);
-  buildPublicUI(); 
+  buildPublicUI();
   renderPublic();
 }
 
@@ -430,19 +394,20 @@ async function loadFromGitHub() {
     const res = await fetch(GH_API + '?ref=' + GH_BRANCH, {
       headers: { 'Accept': 'application/vnd.github.v3+json' }
     });
-    if (res.status === 404) {
-      // Le fichier n'existe pas encore — liste vide, on le créera au premier ajout
-      docs = []; fileSha = null; return;
-    }
+    if (res.status === 404) { docs = []; fileSha = null; return; }
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const json = await res.json();
     fileSha = json.sha;
     const content = atob(json.content.replace(/\n/g, ''));
     const data = JSON.parse(content);
-    docs   = data.docs   || [];
-    config = { ...DEFAULT_CFG, ...config, ...(data.config || {}) };
+    docs = data.docs || [];
+
+    // On fusionne la config distante SANS le champ password (il ne doit plus y être)
+    const remoteConfig = { ...data.config || {} };
+    delete remoteConfig.password;   // sécurité : on ignore tout mot de passe venu de GitHub
+    config = { ...DEFAULT_CFG, ...config, ...remoteConfig };
+
     nextId = docs.reduce((m,d) => Math.max(m, d.id||0), 0) + 1;
-    // Sync local config with remote
     localStorage.setItem(KEY_CFG, JSON.stringify(config));
     applyConfig();
   } catch(e) {
@@ -453,16 +418,20 @@ async function loadFromGitHub() {
 }
 
 /* ══════════════════════════════════════════════════════
-   GITHUB — ÉCRITURE
+   GITHUB — ÉCRITURE  (mot de passe JAMAIS inclus)
 ══════════════════════════════════════════════════════ */
 async function saveToGitHub(message) {
   const token = localStorage.getItem(KEY_TOK);
   if (!token) {
-    showToast('Token GitHub manquant — ouvrez l\'admin pour le configurer.', 'err');
+    showToast("Token GitHub manquant — ouvrez l'admin pour le configurer.", 'err');
     return false;
   }
 
-  const data = { docs, config };
+  // On construit une config publique sans aucun mot de passe
+  const safeConfig = { ...config };
+  delete safeConfig.password;
+
+  const data = { docs, config: safeConfig };
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
 
   const body = { message, content, branch: GH_BRANCH };
@@ -479,15 +448,8 @@ async function saveToGitHub(message) {
       body: JSON.stringify(body)
     });
 
-    if (res.status === 401) {
-      showToast('Token invalide ou expiré. Mettez-le à jour dans l\'admin.', 'err');
-      return false;
-    }
-    if (!res.ok) {
-      const err = await res.json();
-      showToast('Erreur GitHub : ' + (err.message || res.status), 'err');
-      return false;
-    }
+    if (res.status === 401) { showToast('Token invalide ou expiré. Mettez-le à jour dans l\'admin.', 'err'); return false; }
+    if (!res.ok) { const err = await res.json(); showToast('Erreur GitHub : ' + (err.message || res.status), 'err'); return false; }
 
     const json = await res.json();
     fileSha = json.content.sha;
@@ -522,7 +484,6 @@ function buildPublicUI() {
     sec.setAttribute('role','tabpanel');
 
     let inner = `<p class="section-intro">${escHtml(cat.intro || '')}</p>`;
-
     if (cat.children && cat.children.length) {
       inner += '<div class="subtabs-bar">';
       cat.children.forEach((sub, si) => {
@@ -530,14 +491,11 @@ function buildPublicUI() {
       });
       inner += '</div>';
       cat.children.forEach((sub, si) => {
-        inner += `<div id="subsection-${sub.id}" class="subsection${si===0?' active':''}">
-                    <div class="doc-list" id="list-${sub.id}"></div>
-                  </div>`;
+        inner += `<div id="subsection-${sub.id}" class="subsection${si===0?' active':''}"><div class="doc-list" id="list-${sub.id}"></div></div>`;
       });
     } else {
       inner += `<div class="doc-list" id="list-${cat.id}"></div>`;
     }
-
     sec.innerHTML = inner;
     container.appendChild(sec);
   });
@@ -552,15 +510,13 @@ function buildAdminTypeSelect() {
       grp.label = cat.label;
       cat.children.forEach(sub => {
         const opt = document.createElement('option');
-        opt.value = sub.id;
-        opt.textContent = sub.label;
+        opt.value = sub.id; opt.textContent = sub.label;
         grp.appendChild(opt);
       });
       sel.appendChild(grp);
     } else {
       const opt = document.createElement('option');
-      opt.value = cat.id;
-      opt.textContent = cat.label;
+      opt.value = cat.id; opt.textContent = cat.label;
       sel.appendChild(opt);
     }
   });
@@ -597,10 +553,7 @@ function renderPublic() {
           </div>
           <div class="doc-actions">
             ${d.url
-              ? `<a class="btn-open" href="${escHtml(d.url)}" target="_blank" rel="noopener">
-                  Ouvrir
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M5 2h5v5"/></svg>
-                </a>`
+              ? `<a class="btn-open" href="${escHtml(d.url)}" target="_blank" rel="noopener">Ouvrir <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M5 2h5v5"/></svg></a>`
               : `<span class="btn-open" style="opacity:.38;cursor:default;">Bientôt</span>`
             }
           </div>
@@ -637,8 +590,7 @@ function renderAdmin() {
     sec.className = 'admin-section';
     let rows = '';
     if (cat.children) {
-      let total = 0;
-      let subHtml = '';
+      let total = 0; let subHtml = '';
       cat.children.forEach(sub => {
         const items = docs.filter(d => d.type === sub.id);
         total += items.length;
@@ -647,16 +599,10 @@ function renderAdmin() {
           ${items.length ? items.map(d => adminRow(d)).join('') : '<div style="font-family:var(--ff-mono);font-size:10.5px;color:var(--ink-faint);padding:.3rem 0;">Aucun document.</div>'}
         </div>`;
       });
-      rows = `<div class="admin-section-header">
-        <span class="admin-section-title">${escHtml(cat.label)}</span>
-        <span class="admin-section-sub">${total} document${total!==1?'s':''}</span>
-      </div>${subHtml}`;
+      rows = `<div class="admin-section-header"><span class="admin-section-title">${escHtml(cat.label)}</span><span class="admin-section-sub">${total} document${total!==1?'s':''}</span></div>${subHtml}`;
     } else {
       const items = docs.filter(d => d.type === cat.id);
-      rows = `<div class="admin-section-header">
-        <span class="admin-section-title">${escHtml(cat.label)}</span>
-        <span class="admin-section-sub">${items.length} document${items.length!==1?'s':''}</span>
-      </div>
+      rows = `<div class="admin-section-header"><span class="admin-section-title">${escHtml(cat.label)}</span><span class="admin-section-sub">${items.length} document${items.length!==1?'s':''}</span></div>
       ${items.length ? items.map(d => adminRow(d)).join('') : '<div style="font-family:var(--ff-mono);font-size:10.5px;color:var(--ink-faint);padding:.3rem 0;">Aucun document.</div>'}`;
     }
     sec.innerHTML = rows;
@@ -693,62 +639,61 @@ async function addDocument() {
   if (!url)   { document.getElementById('f-url').focus();   return; }
 
   const btn = document.getElementById('btn-add');
-  btn.disabled = true;
-  btn.textContent = 'Publication…';
+  btn.disabled = true; btn.textContent = 'Publication…';
   document.getElementById('sync-status').textContent = 'Envoi vers GitHub…';
 
   docs.push({ id: nextId++, type, title, subject, info, badge, url, date: todayStr() });
 
   const ok = await saveToGitHub('Ajout : ' + title);
   if (ok) {
-    renderPublic();
-    renderAdmin();
+    renderPublic(); renderAdmin();
     ['f-title','f-subject','f-info','f-badge','f-url'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('sync-status').textContent = '✓ Synchronisé avec GitHub';
     showToast('Document publié et visible par tous !', 'ok');
     document.getElementById('add-success').style.display = 'block';
-    setTimeout(() => {
-      document.getElementById('add-success').style.display = 'none';
-      document.getElementById('sync-status').textContent = '';
-    }, 4000);
+    setTimeout(() => { document.getElementById('add-success').style.display = 'none'; document.getElementById('sync-status').textContent = ''; }, 4000);
   } else {
-    // Rollback
     docs.pop(); nextId--;
     document.getElementById('sync-status').textContent = '✗ Échec de la synchronisation';
   }
-
-  btn.disabled = false;
-  btn.textContent = 'Publier →';
+  btn.disabled = false; btn.textContent = 'Publier →';
 }
 
 async function deleteDoc(id) {
   if (!confirm('Supprimer ce document ? Il sera retiré pour tout le monde.')) return;
   const backup = [...docs];
   docs = docs.filter(d => d.id !== id);
-
   const ok = await saveToGitHub('Suppression document #' + id);
-  if (ok) {
-    renderPublic();
-    renderAdmin();
-    showToast('Document supprimé.', 'ok');
-  } else {
-    docs = backup;
-    showToast('Échec de la suppression.', 'err');
-  }
+  if (ok) { renderPublic(); renderAdmin(); showToast('Document supprimé.', 'ok'); }
+  else { docs = backup; showToast('Échec de la suppression.', 'err'); }
 }
 
 /* ══════════════════════════════════════════════════════
-   CONFIG
+   CONFIG  —  mot de passe stocké localement en hash SHA-256
 ══════════════════════════════════════════════════════ */
 async function saveConfig() {
   const newPwd = document.getElementById('cfg-pwd').value.trim();
+
   config.name        = document.getElementById('cfg-name').value.trim()        || config.name;
   config.institution = document.getElementById('cfg-institution').value.trim() || config.institution;
   config.year        = document.getElementById('cfg-year').value.trim()        || config.year;
   config.dept        = document.getElementById('cfg-dept').value.trim()        || config.dept;
-  if (newPwd) { config.password = newPwd; document.getElementById('cfg-pwd').value = ''; }
-  localStorage.setItem(KEY_CFG, JSON.stringify(config));
+
+  // Mot de passe : on hash et on stocke UNIQUEMENT en localStorage, jamais dans le JSON GitHub
+  if (newPwd) {
+    const h = await hashPwd(newPwd);
+    localStorage.setItem(KEY_PWD_HASH, h);
+    document.getElementById('cfg-pwd').value = '';
+    showToast('Mot de passe mis à jour (stocké localement).', 'ok');
+  }
+
+  // Sauvegarde locale sans aucun mot de passe
+  const cfgToStore = { ...config };
+  delete cfgToStore.password;
+  localStorage.setItem(KEY_CFG, JSON.stringify(cfgToStore));
+  config = cfgToStore;
   applyConfig();
+
   const ok = await saveToGitHub('Mise à jour configuration');
   if (ok) { showToast('Configuration sauvegardée !', 'ok'); flash('cfg-success'); }
 }
@@ -777,7 +722,7 @@ function saveToken() {
 }
 
 /* ══════════════════════════════════════════════════════
-   AUTH
+   AUTH  —  comparaison par hash SHA-256
 ══════════════════════════════════════════════════════ */
 function openLoginModal() {
   if (sessionStorage.getItem(KEY_SESS) === '1') { openAdmin(); return; }
@@ -791,9 +736,14 @@ function closeLoginModal() {
 }
 function closeLoginOnBg(e) { if (e.target === e.currentTarget) closeLoginModal(); }
 
-function doLogin() {
+async function doLogin() {
   const pwd = document.getElementById('login-pwd').value;
-  if (pwd === (config.password || DEFAULT_CFG.password)) {
+  const enteredHash  = await hashPwd(pwd);
+  const storedHash   = localStorage.getItem(KEY_PWD_HASH);
+  const defaultHash  = await hashPwd(DEFAULT_PWD);
+  const validHash    = storedHash || defaultHash;   // si aucun hash stocké → on utilise le défaut
+
+  if (enteredHash === validHash) {
     sessionStorage.setItem(KEY_SESS, '1');
     closeLoginModal();
     openAdmin();
@@ -851,8 +801,7 @@ function showLoading(on) {
 }
 function showToast(msg, type) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'toast ' + type + ' show';
+  t.textContent = msg; t.className = 'toast ' + type + ' show';
   setTimeout(() => t.classList.remove('show'), 4000);
 }
 function flash(id) { const el = document.getElementById(id); el.style.display='block'; setTimeout(()=>el.style.display='none',3500); }
