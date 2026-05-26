@@ -1,23 +1,13 @@
 {
   "docs": [
     {
-      "id": 2,
+      "id": 1,
       "type": "datasheets",
-      "title": "PR",
-      "subject": "1",
-      "info": "2",
+      "title": "hh",
+      "subject": "",
+      "info": "",
       "badge": "",
-      "url": "https://docs.google.com/presentation/d/1IzYoiI0prWTmqlbt1WRv84ussF17y_VonIPztQb4kV4/edit?usp=sharing",
-      "date": "2026-05-26"
-    },
-    {
-      "id": 3,
-      "type": "diagrammes",
-      "title": "2",
-      "subject": "8",
-      "info": "9",
-      "badge": "",
-      "url": "https://drive.google.com/file/d/1EdGkIRn4qCna2IQELoS3s0A9Ii-7d6wH/view?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1IzYoiI0prWTmqlbt1WRv84ussF17y_VonIPztQb4kV4/edit?usp=drive_link",
       "date": "2026-05-26"
     }
   ],
@@ -25,6 +15,6 @@
     "name": "Prof. Mourad LAMRAOUI",
     "institution": "UJM IUT de Roanne",
     "year": "2025 - 2026",
-    "dept": "SPI",
+    "dept": "SPI"
   }
 }
