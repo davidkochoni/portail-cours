@@ -1,5 +1,16 @@
 {
-  "docs": [],
+  "docs": [
+    {
+      "id": 2,
+      "type": "datasheets",
+      "title": "PR",
+      "subject": "1",
+      "info": "2",
+      "badge": "",
+      "url": "https://docs.google.com/presentation/d/1IzYoiI0prWTmqlbt1WRv84ussF17y_VonIPztQb4kV4/edit?usp=sharing",
+      "date": "2026-05-26"
+    }
+  ],
   "config": {
     "name": "Prof. Mourad LAMRAOUI",
     "institution": "UJM IUT de Roanne",
