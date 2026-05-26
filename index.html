@@ -418,6 +418,7 @@ async function init() {
   showLoading(true);
   await loadFromGitHub();
   showLoading(false);
+  buildPublicUI(); 
   renderPublic();
 }
 
